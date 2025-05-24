@@ -1,0 +1,24 @@
+package layouts
+
+import "hrqmonteiro.com.br/templates/components/molecules"
+
+templ Base(title string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<title>{ title }</title>
+			<script src="https://unpkg.com/htmx.org@1.9.10"></script>
+			<link href="/static/css/main.css" rel="stylesheet"/>
+		</head>
+		<body class="bg-primary">
+			@molecules.Navbar()
+			<div class="container mx-auto max-w-screen-sm md:px-6">
+				{ children... }
+			</div>
+		</body>
+		<script src="/static/js/clock.js"></script>
+		<script src="/static/js/theme.js"></script>
+	</html>
+}

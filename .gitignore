@@ -1,0 +1,36 @@
+# IDE
+.idea/
+.vscode/
+
+# Nodejs dependencies
+node_modules/
+
+# Generated files
+*_templ.go
+/static/css/main.css
+/bin/
+/cmd/server/tmp/
+
+# Logs and temporary files
+*.log
+air_errors.log
+.air.toml.tmp
+
+# OS specific
+.DS_Store
+*.swp
+*.swo
+
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+go.work.sum
+
+# Environment variables
+.env

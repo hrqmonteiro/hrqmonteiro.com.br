@@ -1,0 +1,27 @@
+root = "."
+tmp_dir = "cmd/server/tmp"
+
+[build]
+cmd = "templ generate && go build -o ./cmd/server/tmp/main ./cmd/server"
+bin = "./cmd/server/tmp/main"
+full_bin = "./cmd/server/tmp/main"
+include_ext = ["go", "templ"]
+exclude_dir = ["assets", "tmp", "vendor", "node_modules"]
+exclude_regex = [".*_templ\\.go"]
+include_dir = []
+exclude_file = []
+delay = 1000
+stop_on_error = true
+log = "air_errors.log"
+
+[log]
+time = true
+
+[color]
+main = "yellow"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+clean_on_exit = true
