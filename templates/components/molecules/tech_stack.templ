@@ -74,7 +74,7 @@ var Stack = []TechIcon{
 }
 
 templ TechStack() {
-	<div class="mb-14 flex flex-col text-sm">
+	<div class="mb-14 flex flex-col text-sm" onload="applySystemTheme()">
 		<span class="text-xs font-medium uppercase">
 			What I've worked with (so far)
 		</span>
@@ -89,7 +89,9 @@ templ TechStack() {
 							height="18"
 							width="18"
 							alt={ tech.Name }
-							src={ "https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/" + tech.Icon + ".svg" }
+							class="tech-icon"
+							data-icon={ tech.Icon }
+							src=""
 						/>
 					</div>
 				</li>

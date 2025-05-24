@@ -5,6 +5,8 @@
 :root {
     --primary: #ffffff;
     --secondary: #e8e8e8;
+    --text-primary: #171717;
+    --text-secondary: #6f6f6f;
     --mono: #8f8f8f;
 }
 
@@ -12,6 +14,7 @@
     --primary: #161616;
     --secondary: #2e2e2e;
     --text-primary: #ededed;
+    --text-secondary: #a0a0a0;
     --mono: #707070;
 }
 
