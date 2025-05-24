@@ -32,6 +32,7 @@ func main() {
 
 	r.Static("/static", staticPath)
 	r.GET("/", handlers.IndexHandler)
+	r.GET("/quote", handlers.QuoteHandler)
 
 	fmt.Println("Server starting on :8080")
 	r.Run(":8080")

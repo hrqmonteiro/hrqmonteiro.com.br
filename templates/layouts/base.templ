@@ -17,11 +17,12 @@ templ Base(title string) {
 		</head>
 		<body class="bg-primary font-sans">
 			@molecules.Navbar()
-			<div class="container mx-auto max-w-screen-sm md:px-6">
-				<main class="min-h-screen py-20">
+			<div class="container mx-auto max-w-screen-sm px-4 md:px-6">
+				<main class="py-20">
 					{ children... }
 				</main>
 			</div>
+			@molecules.Footer()
 		</body>
 		<script src="/static/js/clock.js"></script>
 		<script src="/static/js/theme.js"></script>

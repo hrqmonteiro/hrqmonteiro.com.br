@@ -41,9 +41,12 @@ templ-generate:
 	templ generate
 
 # Install dependencies
+.PHONY: setup
+
 setup:
 	@echo "Installing dependencies..."
-	go mod tidy
-	go install github.com/cosmtrek/air@latest
+	go install github.com/air-verse/air@latest
 	go install github.com/a-h/templ/cmd/templ@latest
 	npm install
+	templ generate
+	go mod tidy

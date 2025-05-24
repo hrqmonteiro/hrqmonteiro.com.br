@@ -9,8 +9,10 @@ module.exports = {
         extend: {
             colors: {
                 primary: 'var(--primary)',
-                'text-primary': 'var(--text-primary)',
-                'text-secondary': 'var(--text-secondary)'
+                secondary: 'var(--secondary)',
+            },
+            textColor: {
+                mono: 'var(--mono)'
             },
             fontFamily: {
                 sans: ['Inter', 'ui-sans-serif', 'sans-serif']
