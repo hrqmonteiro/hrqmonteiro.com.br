@@ -1,0 +1,36 @@
+package molecules
+
+type TechIcon struct {
+	Icon string
+	Name string
+}
+
+var Stack = []TechIcon{
+	{"typescript", "TypeScript"},
+	{"javascript", "JavaScript"},
+	{"node", "NodeJS"},
+	{"react", "React"},
+	{"vue", "Vue"},
+	{"docker", "Docker"},
+	{"git", "Git"},
+	{"figma", "Figma"},
+	{"github", "GitHub"},
+	{"terminal", "Terminal"},
+	{"settings", "Settings"},
+}
+
+templ TechStack() {
+	<div class="mb-14 flex flex-col text-sm">
+		<span class="text-xs font-medium uppercase">
+			What I've worked with (so far)
+		</span>
+		<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+			for _, tech := range Stack {
+				<div class="flex items-center space-x-2">
+					<i data-lucide={ tech.Icon } class="w-5 h-5"></i>
+					<span>{ tech.Name }</span>
+				</div>
+			}
+		</div>
+	</div>
+}
