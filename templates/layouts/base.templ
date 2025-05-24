@@ -11,8 +11,12 @@ templ Base(title string) {
 			<title>{ title }</title>
 			<script src="https://unpkg.com/htmx.org@1.9.10"></script>
 			<link href="/static/css/main.css" rel="stylesheet"/>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		</head>
-		<body class="bg-primary">
+		<body class="bg-primary font-sans">
 			@molecules.Navbar()
 			<div class="container mx-auto max-w-screen-sm md:px-6">
 				{ children... }
