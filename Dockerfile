@@ -4,6 +4,7 @@ WORKDIR /app
 # Copy all files needed for CSS processing
 COPY package*.json ./
 COPY tailwind.config.js ./
+COPY static/images ./static/images
 COPY static/css ./static/css
 COPY templates ./templates
 # Install dependencies and build CSS
