@@ -2,7 +2,7 @@ root = "."
 tmp_dir = "cmd/server/tmp"
 
 [build]
-cmd = "templ generate && go build -o ./cmd/server/tmp/main ./cmd/server"
+cmd = "templ generate && npm run css && go build -o ./cmd/server/tmp/main ./cmd/server"
 bin = "./cmd/server/tmp/main"
 full_bin = "./cmd/server/tmp/main"
 include_ext = ["go", "templ"]

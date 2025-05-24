@@ -13,8 +13,9 @@ module.exports = {
                 'text-secondary': 'var(--text-secondary)'
             },
             fontFamily: {
-                sans: ['Roboto', 'ui-sans-serif', 'sans-serif']
-            }
+                sans: ['Inter', 'ui-sans-serif', 'sans-serif']
+            },
+            grayscale: ['hover', 'group-hover']
         }
     },
     plugins: []

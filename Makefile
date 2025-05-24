@@ -47,16 +47,3 @@ setup:
 	go install github.com/cosmtrek/air@latest
 	go install github.com/a-h/templ/cmd/templ@latest
 	npm install
-
-# Docker commands
-docker-build:
-	docker compose build --no-cache
-
-docker-up:
-	docker compose up -d
-
-docker-down:
-	docker compose down
-
-docker-logs:
-	docker compose logs -f

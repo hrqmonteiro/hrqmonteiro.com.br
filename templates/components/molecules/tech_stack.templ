@@ -8,15 +8,69 @@ type TechIcon struct {
 var Stack = []TechIcon{
 	{"typescript", "TypeScript"},
 	{"javascript", "JavaScript"},
-	{"node", "NodeJS"},
+	{"nodedotjs", "Node.js"},
+	{"express", "Express.js"},
+	{"electron", "Electron"},
+	{"npm", "npm"},
+	{"yarn", "Yarn"},
+	{"pnpm", "PNPM"},
+	{"nestjs", "NestJS"},
+	{"deno", "Deno"},
+	{"go", "Golang"},
+	{"vuedotjs", "Vue"},
 	{"react", "React"},
-	{"vue", "Vue"},
-	{"docker", "Docker"},
+	{"nextdotjs", "Next.js"},
+	{"reacthookform", "React Hook Form"},
+	{"reactquery", "React Query"},
+	{"reactrouter", "React Router"},
+	{"reacttable", "React Table"},
+	{"tailwindcss", "TailwindCSS"},
+	{"storybook", "Storybook"},
+	{"graphql", "GraphQL"},
+	{"trpc", "tRPC"},
+	{"postgresql", "PostgreSQL"},
+	{"mongodb", "MongoDB"},
+	{"mysql", "MySQL"},
+	{"mariadb", "MariaDB"},
+	{"amazondynamodb", "AWS DynamoDB"},
+	{"auth0", "Auth0"},
+	{"prisma", "Prisma.io"},
+	{"supabase", "Supabase"},
+	{"apachekafka", "Apache Kafka"},
+	{"planetscale", "PlanetScale"},
+	{"amazonwebservices", "Amazon Web Services"},
+	{"awslambda", "AWS Lambda"},
+	{"awsamplify", "AWS Amplify"},
+	{"amazons3", "AWS S3"},
+	{"amazonec2", "AWS EC2"},
+	{"digitalocean", "DigitalOcean"},
+	{"vercel", "Vercel"},
+	{"netlify", "Netlify"},
 	{"git", "Git"},
-	{"figma", "Figma"},
 	{"github", "GitHub"},
-	{"terminal", "Terminal"},
-	{"settings", "Settings"},
+	{"gitlab", "GitLab"},
+	{"docker", "Docker"},
+	{"kubernetes", "Kubernetes"},
+	{"amazoneks", "AWS EKS"},
+	{"nginx", "Nginx"},
+	{"datadog", "Datadog"},
+	{"circleci", "CircleCi"},
+	{"argo", "ArgoCD"},
+	{"jest", "Jest"},
+	{"mocha", "Mocha"},
+	{"chai", "Chai"},
+	{"testinglibrary", "Testing Library"},
+	{"postman", "Postman"},
+	{"insomnia", "Insomnia"},
+	{"figma", "Figma"},
+	{"framer", "Framer"},
+	{"jira", "Jira"},
+	{"trello", "Trello"},
+	{"slack", "Slack"},
+	{"miro", "Miro"},
+	{"linux", "Linux"},
+	{"freebsd", "FreeBSD"},
+	{"apple", "MacOS"},
 }
 
 templ TechStack() {
@@ -24,13 +78,22 @@ templ TechStack() {
 		<span class="text-xs font-medium uppercase">
 			What I've worked with (so far)
 		</span>
-		<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
+		<ul class="mt-4 flex flex-wrap justify-start md:justify-between">
 			for _, tech := range Stack {
-				<div class="flex items-center space-x-2">
-					<i data-lucide={ tech.Icon } class="w-5 h-5"></i>
-					<span>{ tech.Name }</span>
-				</div>
+				<li
+					title={ tech.Name }
+					class="transition-all duration-200 hover:opacity-40"
+				>
+					<div class="mb-2 mr-2 flex items-center justify-center text-lg">
+						<img
+							height="18"
+							width="18"
+							alt={ tech.Name }
+							src={ "https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/" + tech.Icon + ".svg" }
+						/>
+					</div>
+				</li>
 			}
-		</div>
+		</ul>
 	</div>
 }

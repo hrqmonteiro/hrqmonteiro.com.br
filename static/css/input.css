@@ -27,9 +27,10 @@ body {
 }
 
 body {
+    height: 100vh;
     background-color: var(--primary);
     color: var(--text-primary);
-    font-family: 'Roboto', sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 a {

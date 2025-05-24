@@ -1,9 +1,13 @@
 package pages
 
+import "hrqmonteiro.com.br/templates/components/molecules"
+import "hrqmonteiro.com.br/templates/components/atoms"
 import "hrqmonteiro.com.br/templates/layouts"
 
 templ Index() {
 	@layouts.Base("Henrique Monteiro") {
-	    <div>a</div>
+		@atoms.Heading()
+		@atoms.Tldr()
+		@molecules.TechStack()
 	}
 }
