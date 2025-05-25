@@ -40,7 +40,7 @@ COPY --from=go-builder /app/templates ./templates
 # Copy content directory
 COPY --from=go-builder /app/content ./content
 # Expose port
-EXPOSE 8080
+EXPOSE 8000
 # Run the binary
 CMD ["./server"]
 
