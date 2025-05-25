@@ -1,0 +1,10 @@
+package molecules
+
+templ LeetCode() {
+	<div class="flex flex-col py-4">
+		<a href="https://leetcode.com/hrqmonteiro" target="_blank" rel="noreferrer"><h1 class="text-xl font-medium">LeetCode</h1></a>
+		<div class="flex flex-col" id="leetcode-stats" hx-get="/leetcode" hx-trigger="load" hx-swap="innerHTML">
+			<span>Loading...</span>
+		</div>
+	</div>
+}

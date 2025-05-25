@@ -2,7 +2,7 @@ package molecules
 
 templ Footer() {
 	<footer class="bg-primary/30 p-4 md:p-6 text-sm backdrop-blur-sm border-t border-t-1 border-t-secondary text-mono text-xs">
-		<div class="flex justify-between">
+		<div class="flex gap-1 flex-wrap md:no-wrap justify-between truncate ...">
 			<span
 				hx-get="/quote"
 				hx-trigger="load, every 10s"
@@ -10,13 +10,16 @@ templ Footer() {
 			>
 				...
 			</span>
-			<span>
-				<svg id="analogClock" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="text-mono">
-					<circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1"></circle>
-					<line id="hourHand" x1="10" y1="10" x2="10" y2="4" stroke="currentColor" stroke-width="1"></line>
-					<line id="minuteHand" x1="10" y1="10" x2="10" y2="1" stroke="currentColor" stroke-width="1"></line>
-				</svg>
-			</span>
+			<div class="flex items-center gap-1">
+				<i class="text-lg ph ph-spotify-logo text-nano"></i>
+				<span
+					hx-get="/spotify"
+					hx-trigger="load, every 30s"
+					hx-swap="innerHTML"
+				>
+					Not playing
+				</span>
+			</div>
 		</div>
 	</footer>
 }

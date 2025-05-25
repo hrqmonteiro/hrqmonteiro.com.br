@@ -1,0 +1,10 @@
+package molecules
+
+templ Github() {
+	<div class="flex flex-col py-4">
+		<a href="https://github.com/hrqmonteiro" target="_blank" rel="noreferrer"><h1 class="text-xl font-medium">Github</h1></a>
+		<div class="flex flex-col" id="github-stats" hx-get="/github" hx-trigger="load" hx-swap="innerHTML">
+			<span>Loading...</span>
+		</div>
+	</div>
+}

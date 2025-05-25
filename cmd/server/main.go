@@ -32,8 +32,15 @@ func main() {
 
 	r.Static("/static", staticPath)
 	r.GET("/", handlers.IndexHandler)
+	r.GET("/github", handlers.GitHubHandler)
+	r.GET("/leetcode", handlers.LeetCodeHandler)
+	r.GET("/spotify", handlers.SpotifyHandler)
 	r.GET("/quote", handlers.QuoteHandler)
 
-	fmt.Println("Server starting on :8080")
-	r.Run(":8080")
+	err = r.Run(":8000")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("Server starting on :8000")
 }
